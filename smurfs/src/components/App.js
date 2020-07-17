@@ -1,31 +1,22 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "./App.css";
 import SmurfsList from './SmurfsList';
 import axios from 'axios';
+
 //import SmurfsForm from './SmurfsForm';
 
 import { SmurfContext } from '../contexts/SmurfContext';
 
-//const [newSmurf, setNewSmurf] = useState([]);
 class App extends Component {
+  
+  // const [newSmurf, setNewSmurf] = useState([smurfs]);
+
+
   state = {
-    smurf: "",
     list: []
   };
 
-componentDidMount() {
-  axios
-    .get("http://localhost:3333/smurfs")
-    .then( res => {
-      console.log("Response", res)
-      this.setState({
-        ...this.state, list: res.data
-      })
-    }) 
-    .catch(err => {
-      console.log("Something went wrong", err)
-    });
-  };
+
 
   render() {
     return (
