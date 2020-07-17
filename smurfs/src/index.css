@@ -3,3 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.entire-form {
+  background-color: lightblue;
+}
+
+.inputs {
+  margin: 2%;
+}
+
+.button {
+  width: 300px;
+}
